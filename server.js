@@ -13,6 +13,7 @@ app.use('/',exp.static(__dirname+'/public'))
 app.get('/input', (req,res) => {
   try {
     let input = req.query.input
+    console.log(input);
     // call the module function with user input as argument
     response.responseFunc(input)
     .then((data) => {
